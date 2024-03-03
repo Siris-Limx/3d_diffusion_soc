@@ -1,0 +1,48 @@
+
+startup.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text.init:
+
+00000000 <_prog_start>:
+   0:	00800913          	li	s2,8
+   4:	30491073          	csrw	mie,s2
+   8:	00000493          	li	s1,0
+   c:	f1402973          	csrr	s2,mhartid
+  10:	03249663          	bne	s1,s2,3c <.L42^B1>
+  14:	84000137          	lui	sp,0x84000
+  18:	00000097          	auipc	ra,0x0
+  1c:	000080e7          	jalr	ra # 18 <_prog_start+0x18>
+  20:	020004b7          	lui	s1,0x2000
+
+00000024 <.L41^B1>:
+  24:	00100913          	li	s2,1
+  28:	0124a023          	sw	s2,0(s1) # 2000000 <.L41^B2+0x1ffffa0>
+  2c:	00448493          	add	s1,s1,4
+  30:	02000937          	lui	s2,0x2000
+  34:	40090913          	add	s2,s2,1024 # 2000400 <.L41^B2+0x20003a0>
+  38:	ff24c6e3          	blt	s1,s2,24 <.L41^B1>
+
+0000003c <.L42^B1>:
+  3c:	10500073          	wfi
+  40:	34402973          	csrr	s2,mip
+  44:	00897913          	and	s2,s2,8
+  48:	fe090ae3          	beqz	s2,3c <.L42^B1>
+  4c:	020004b7          	lui	s1,0x2000
+  50:	f1402973          	csrr	s2,mhartid
+  54:	00291913          	sll	s2,s2,0x2
+  58:	00990933          	add	s2,s2,s1
+  5c:	00092023          	sw	zero,0(s2)
+
+00000060 <.L41^B2>:
+  60:	0004a903          	lw	s2,0(s1) # 2000000 <.L41^B2+0x1ffffa0>
+  64:	fe091ee3          	bnez	s2,60 <.L41^B2>
+  68:	00448493          	add	s1,s1,4
+  6c:	02000937          	lui	s2,0x2000
+  70:	40090913          	add	s2,s2,1024 # 2000400 <.L41^B2+0x20003a0>
+  74:	ff24c6e3          	blt	s1,s2,60 <.L41^B2>
+  78:	f1402573          	csrr	a0,mhartid
+  7c:	00000597          	auipc	a1,0x0
+  80:	00058593          	mv	a1,a1
+  84:	800004b7          	lui	s1,0x80000
+  88:	00048067          	jr	s1 # 80000000 <.L41^B2+0x7fffffa0>

@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Jan 25 02:52:19 2024
+# Process ID: 12456
+# Current directory: /home/sirisli/cva6/corev_apu/fpga/src/bootrom
+# Command line: vivado
+# Log file: /home/sirisli/cva6/corev_apu/fpga/src/bootrom/vivado.log
+# Journal file: /home/sirisli/cva6/corev_apu/fpga/src/bootrom/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sirisli/cva6/corev_apu/fpga/ariane.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 6572.543 ; gain = 425.469 ; free physical = 21953 ; free virtual = 33777
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:18:37
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+current_hw_device [get_hw_devices xczu15_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xczu15_0] 0]
+INFO: [Labtools 27-1435] Device xczu15 (JTAG device index = 0) is not programmed (DONE status = 0).
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xczu15_0]
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 25 02:56:40 2024...

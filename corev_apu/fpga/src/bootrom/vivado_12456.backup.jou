@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Jan 25 02:52:19 2024
+# Process ID: 12456
+# Current directory: /home/sirisli/cva6/corev_apu/fpga/src/bootrom
+# Command line: vivado
+# Log file: /home/sirisli/cva6/corev_apu/fpga/src/bootrom/vivado.log
+# Journal file: /home/sirisli/cva6/corev_apu/fpga/src/bootrom/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sirisli/cva6/corev_apu/fpga/ariane.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xczu15_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xczu15_0] 0]
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xczu15_0]
